@@ -5,14 +5,15 @@
   
 
   
-  <title>LiuHao&#39;blog</title>
+  <title>first | LiuHao&#39;blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="LiuHao&#39;blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta property="og:type" content="article">
+<meta property="og:title" content="first">
+<meta property="og:url" content="http://yoursite.com/2018/03/24/first-1/index.html">
 <meta property="og:site_name" content="LiuHao&#39;blog">
+<meta property="og:updated_time" content="2018-03-24T15:40:00.965Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LiuHao&#39;blog">
+<meta name="twitter:title" content="first">
   
     <link rel="alternate" href="/atom.xml" title="LiuHao&#39;blog" type="application/atom+xml">
   
@@ -59,9 +60,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-first-1" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-first-1" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/03/24/first-1/" class="article-date">
   <time datetime="2018-03-24T15:40:00.000Z" itemprop="datePublished">2018-03-24</time>
@@ -74,8 +73,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/24/first-1/">first</a>
+    <h1 class="article-title" itemprop="name">
+      first
     </h1>
   
 
@@ -93,87 +92,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-first" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/03/24/first/" class="article-date">
-  <time datetime="2018-03-24T15:32:39.000Z" itemprop="datePublished">2018-03-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/24/first/">first</a>
-    </h1>
+    <a href="/2018/03/24/first/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title">first</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>package com;<br>/* </p>
-<ul>
-<li>Java实现快速排序算法 </li>
-<li>author:刘豪 </li>
-<li><p>2016-7-14<br>*/<br>public class QuickSort {<br> public static void main(String[] args) {  </p>
-<pre><code>int a[] = {3,1,5,7,2,4,9,6,10,8};    
-QuickSort  obj=new QuickSort();  
-System.out.println(&quot;初始值：&quot;);  
-obj.print(a);  
-int h=a.length-1;  
-obj.quickSort(a,0,h);  
-System.out.println(&quot;\n排序后：&quot;);  
-obj.print(a);  
-</code></pre><p> }<br> private  void quickSort(int[] a,int low, int high) {  </p>
-<pre><code>if(low&lt;high){ //如果不加这个判断递归会无法退出导致堆栈溢出异常  
-     int middle=getMiddle(a,low,high);  
-     quickSort(a,  0,  middle-1);          //递归对低子表递归排序    
-     quickSort(a,   middle + 1, high);        //递归对高子表递归排序    
-}  
-</code></pre><p> }<br> public int getMiddle(int[] a, int low, int high){  </p>
-<pre><code>int key = a[low];//基准元素，排序中会空出来一个位置  
-while(low&lt;high){  
-    while(low&lt;high &amp;&amp; a[high]&gt;=key){//从high开始找比基准小的，与low换位置  
-        high--;  
-    }  
-    a[low]=a[high];  
-    while(low&lt;high &amp;&amp; a[low]&lt;=key){//从low开始找比基准大,放到之前high空出来的位置上  
-        low++;  
-    }  
-    a[high]=a[low];  
-}  
-a[low]=key;//此时low=high 是基准元素的位置，也是空出来的那个位置  
-return low;  
-</code></pre><p> }<br> public void print(int a[]){  </p>
-<pre><code>for(int i=0;i&lt;a.length;i++){  
-    System.out.print(a[i]+&quot; &quot;);  
-}  
-</code></pre><p> }<br>}  </p>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/24/first/" data-id="cjf5jjquf0000wgvjmbv534y4" class="article-share-link">Teilen</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
-
 
 </section>
         
