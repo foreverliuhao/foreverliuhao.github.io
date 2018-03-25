@@ -5,18 +5,18 @@
   
 
   
-  <title>first | LiuHao&#39;blog</title>
+  <title>面试算法：把数组排成最小的数 | LiuHao&#39;blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="package com;/*   Java实现快速排序算法  author:刘豪  2016-7-14*/public class QuickSort { public static void main(String[] args) {   int a[] = {3,1,5,7,2,4,9,6,10,8};     QuickSort  obj=new QuickSort();   System.">
+  <meta name="description" content="package com.hello.test; import java.util.ArrayList;import java.util.Collections;import java.util.Comparator;import java.util.List; public class MinNumberInArray {    public static String PrintMinNumbe">
 <meta property="og:type" content="article">
-<meta property="og:title" content="first">
-<meta property="og:url" content="http://yoursite.com/2018/03/24/first/index.html">
+<meta property="og:title" content="面试算法：把数组排成最小的数">
+<meta property="og:url" content="http://yoursite.com/2018/03/26/面试算法：把数组排成最小的数/index.html">
 <meta property="og:site_name" content="LiuHao&#39;blog">
-<meta property="og:description" content="package com;/*   Java实现快速排序算法  author:刘豪  2016-7-14*/public class QuickSort { public static void main(String[] args) {   int a[] = {3,1,5,7,2,4,9,6,10,8};     QuickSort  obj=new QuickSort();   System.">
-<meta property="og:updated_time" content="2018-03-24T15:33:09.431Z">
+<meta property="og:description" content="package com.hello.test; import java.util.ArrayList;import java.util.Collections;import java.util.Comparator;import java.util.List; public class MinNumberInArray {    public static String PrintMinNumbe">
+<meta property="og:updated_time" content="2018-03-25T17:54:59.997Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="first">
-<meta name="twitter:description" content="package com;/*   Java实现快速排序算法  author:刘豪  2016-7-14*/public class QuickSort { public static void main(String[] args) {   int a[] = {3,1,5,7,2,4,9,6,10,8};     QuickSort  obj=new QuickSort();   System.">
+<meta name="twitter:title" content="面试算法：把数组排成最小的数">
+<meta name="twitter:description" content="package com.hello.test; import java.util.ArrayList;import java.util.Collections;import java.util.Comparator;import java.util.List; public class MinNumberInArray {    public static String PrintMinNumbe">
   
     <link rel="alternate" href="/atom.xml" title="LiuHao&#39;blog" type="application/atom+xml">
   
@@ -63,10 +63,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-first" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-面试算法：把数组排成最小的数" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/03/24/first/" class="article-date">
-  <time datetime="2018-03-24T15:32:39.000Z" itemprop="datePublished">2018-03-24</time>
+    <a href="/2018/03/26/面试算法：把数组排成最小的数/" class="article-date">
+  <time datetime="2018-03-25T17:52:39.000Z" itemprop="datePublished">2018-03-26</time>
 </a>
     
   </div>
@@ -77,7 +77,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      first
+      面试算法：把数组排成最小的数
     </h1>
   
 
@@ -85,51 +85,26 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>package com;<br>/* </p>
-<ul>
-<li>Java实现快速排序算法 </li>
-<li>author:刘豪 </li>
-<li><p>2016-7-14<br>*/<br>public class QuickSort {<br> public static void main(String[] args) {  </p>
-<pre><code>int a[] = {3,1,5,7,2,4,9,6,10,8};    
-QuickSort  obj=new QuickSort();  
-System.out.println(&quot;初始值：&quot;);  
-obj.print(a);  
-int h=a.length-1;  
-obj.quickSort(a,0,h);  
-System.out.println(&quot;\n排序后：&quot;);  
-obj.print(a);  
-</code></pre><p> }<br> private  void quickSort(int[] a,int low, int high) {  </p>
-<pre><code>if(low&lt;high){ //如果不加这个判断递归会无法退出导致堆栈溢出异常  
-     int middle=getMiddle(a,low,high);  
-     quickSort(a,  0,  middle-1);          //递归对低子表递归排序    
-     quickSort(a,   middle + 1, high);        //递归对高子表递归排序    
-}  
-</code></pre><p> }<br> public int getMiddle(int[] a, int low, int high){  </p>
-<pre><code>int key = a[low];//基准元素，排序中会空出来一个位置  
-while(low&lt;high){  
-    while(low&lt;high &amp;&amp; a[high]&gt;=key){//从high开始找比基准小的，与low换位置  
-        high--;  
-    }  
-    a[low]=a[high];  
-    while(low&lt;high &amp;&amp; a[low]&lt;=key){//从low开始找比基准大,放到之前high空出来的位置上  
-        low++;  
-    }  
-    a[high]=a[low];  
-}  
-a[low]=key;//此时low=high 是基准元素的位置，也是空出来的那个位置  
-return low;  
-</code></pre><p> }<br> public void print(int a[]){  </p>
-<pre><code>for(int i=0;i&lt;a.length;i++){  
-    System.out.print(a[i]+&quot; &quot;);  
-}  
-</code></pre><p> }<br>}  </p>
-</li>
-</ul>
+        <p>package com.hello.test;</p>
+<p>import java.util.ArrayList;<br>import java.util.Collections;<br>import java.util.Comparator;<br>import java.util.List;</p>
+<p>public class MinNumberInArray {<br>    public static String PrintMinNumber(int[] numbers) {<br>      int n;<br>      String s=””;<br>      List<integer>  list=new ArrayList&lt;&gt;();<br>      n=numbers.length;<br>      for (int i = 0; i &lt; n; i++) {<br>        list.add(numbers[i]);<br>       }<br>      Collections.sort(list,new Comparator<integer>() {<br>          public int compare(Integer str1,Integer str2) {<br>              String s1=str1+””+str2;<br>              String s2=str2+””+str1;<br>              return s1.compareTo(s2);<br>          }</integer></integer></p>
+<pre><code>  });
+  for(int j:list) {
+      s+=j;
+  }
+  return s;
+}
+public static void main(String[] args) {
+    int[] arr= {3,32,321};
+    String min=PrintMinNumber(arr);
+    System.out.println(min);
+}
+</code></pre><p>}</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/24/first/" data-id="cjf73t9ar0000p4vj89k7use9" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/03/26/面试算法：把数组排成最小的数/" data-id="cjf73t9bh0001p4vjgb0qpxwy" class="article-share-link">Share</a>
       
       
     </footer>
@@ -138,15 +113,11 @@ return low;
     
 <nav id="article-nav">
   
-    <a href="/2018/03/24/first-1/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          first
-        
-      </div>
-    </a>
   
+    <a href="/2018/03/24/first-1/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">first</div>
+    </a>
   
 </nav>
 

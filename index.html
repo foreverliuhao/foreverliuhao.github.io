@@ -50,7 +50,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -60,6 +60,57 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-面试算法：把数组排成最小的数" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/03/26/面试算法：把数组排成最小的数/" class="article-date">
+  <time datetime="2018-03-25T17:52:39.000Z" itemprop="datePublished">2018-03-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/26/面试算法：把数组排成最小的数/">面试算法：把数组排成最小的数</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>package com.hello.test;</p>
+<p>import java.util.ArrayList;<br>import java.util.Collections;<br>import java.util.Comparator;<br>import java.util.List;</p>
+<p>public class MinNumberInArray {<br>    public static String PrintMinNumber(int[] numbers) {<br>      int n;<br>      String s=””;<br>      List<integer>  list=new ArrayList&lt;&gt;();<br>      n=numbers.length;<br>      for (int i = 0; i &lt; n; i++) {<br>        list.add(numbers[i]);<br>       }<br>      Collections.sort(list,new Comparator<integer>() {<br>          public int compare(Integer str1,Integer str2) {<br>              String s1=str1+””+str2;<br>              String s2=str2+””+str1;<br>              return s1.compareTo(s2);<br>          }</integer></integer></p>
+<pre><code>  });
+  for(int j:list) {
+      s+=j;
+  }
+  return s;
+}
+public static void main(String[] args) {
+    int[] arr= {3,32,321};
+    String min=PrintMinNumber(arr);
+    System.out.println(min);
+}
+</code></pre><p>}</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/03/26/面试算法：把数组排成最小的数/" data-id="cjf73t9bh0001p4vjgb0qpxwy" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-first-1" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -87,7 +138,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/24/first-1/" data-id="cjf5jt5jm0000m0vjlpt0o4g8" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/03/24/first-1/" data-id="cjf73t9da0002p4vjvv5o1kuw" class="article-share-link">Share</a>
       
       
     </footer>
@@ -163,7 +214,7 @@ return low;
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/24/first/" data-id="cjf5jt5kd0001m0vjas49egum" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/03/24/first/" data-id="cjf73t9ar0000p4vj89k7use9" class="article-share-link">Share</a>
       
       
     </footer>
@@ -189,7 +240,7 @@ return low;
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archiv</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li></ul>
     </div>
@@ -199,9 +250,13 @@ return low;
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">letzter Beitrag</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2018/03/26/面试算法：把数组排成最小的数/">面试算法：把数组排成最小的数</a>
+          </li>
         
           <li>
             <a href="/2018/03/24/first-1/">first</a>
