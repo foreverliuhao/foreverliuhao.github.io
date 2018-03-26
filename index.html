@@ -348,13 +348,13 @@
 <p>git(基本上都有吧)<br>Node.js<br>Github账号(没有就直接注册)<br>好了，不废(bi)话(bi)了，干就完了。</p>
 <p>2、安装Git(已经安装过的可以自动忽略这步了)<br>下载Windows下的Git客户端Git客户端并安装，安装很简单，基本一路Next下去。</p>
 <p>3、安装Node.js<br>下载Node.js，安装Node.js也是一路Next下去。</p>
-<p>4、Github配置<br><img src="https://github.com/foreverliuhao/IMG/blob/master/hexo1.png" alt="创建账号"><br>首先得有一个Github账号(没有的话就要去Github上注册一个了，基本上就是填一下用户名，邮箱和密码，再验证下邮箱完事)，登陆过后点击 new repository，REPOSITORY NAME填写”自己的名称 + .github.io”，Description可以填写，也可以不填。</p>
+<p>4、Github配置<br><img src="https://github.com/foreverliuhao/IMG/raw/master/hexo1.png" alt="创建账号"><br>首先得有一个Github账号(没有的话就要去Github上注册一个了，基本上就是填一下用户名，邮箱和密码，再验证下邮箱完事)，登陆过后点击 new repository，REPOSITORY NAME填写”自己的名称 + .github.io”，Description可以填写，也可以不填。</p>
 <p>然后直接点Create repository就可以了。</p>
 <p>5、配置Github SSH密钥<br>首先在桌面空白处鼠标右键选择Git Bash Here，然后输入：</p>
 <p>ssh-keygen -t rsa -C “your’s emaill address”<br>“”里面的内容输入你的邮箱地址，然后回车，会提示你文件保存的路径，这时候按回车键确认</p>
 <p>然后会提示你输入密码，输入即可（输入密码是看不到的，这个和Linux是一样的），然后会确认输入一次，就可以在刚刚的路径看到生成了两个文件，一个是id_rsa，另一个是id_rsa.pub，用notepadd++或者别的文本工具打开id_rsa.pub然后选中里面的全部内容，复制下来。</p>
 <p>登录github，点击头像可以看到setting选项，点击进入 然后可以看到左边有一个SSH and GPG keys选项 点击就可以看到以下界面，点击New SSH</p>
-<p><img src="https://github.com/foreverliuhao/IMG/blob/master/hexo2.png" alt="设置"><br>这里的Title随便填写，主要是为了方便管理密钥 然后把刚刚拷贝的内容粘贴到Key里面去 然后点击Add SSH key 到此，Github上面的SSH配置就完成了。</p>
+<p><img src="https://github.com/foreverliuhao/IMG/raw/master/hexo2.png" alt="设置"><br>这里的Title随便填写，主要是为了方便管理密钥 然后把刚刚拷贝的内容粘贴到Key里面去 然后点击Add SSH key 到此，Github上面的SSH配置就完成了。</p>
 <p>6、安装Hexo<br>在安装Hexo之前可以先测试一下Node.js是否安装成功，在桌面空白处右键打开Git Bash Here，然后输入node，如果可以看到提示符变成了一个向右的箭头就表示成功了，然后按ctrl + c退出node模式，出现$符号才表示正常了，输入命令</p>
 <p>$ npm install -g hexo-cli<br>敲完回车可能没有任何提示，请一定要耐心等待 安装成功后，可以输入以下命令测试以下Hexo是否安装成功</p>
 <p>$ hexo version<br>如果能看到hexo的版本号信息，就表示安装成功了<br>接下来，创建一个空文件夹(名称最好不要有中文，而且一定得是空的文件夹，不然init的时候会报错)，右键打开Git Bash Here 然后依次输入以下命令</p>
