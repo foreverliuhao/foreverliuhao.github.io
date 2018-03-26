@@ -99,25 +99,23 @@
 
 
 
-  <meta name="description" content="package com.hello.test;/**  题目描述： 设定如下的对应关系（A=1，B=2，C=3,…,Z=26,AB=28,…,AAA=xxx,…),编写一个转换函数， 根据上面的规则把一个字符串转成数字  @author Liuhao /public class StringToNumber {  public static void main(String[] args) {">
+  <meta name="description" content="/* 1 在Excel中，列的名称是这样一个递增序列：seq={A、B、C、…  Z、AA、AB、AC、… AZ、BA、BB、BC、… BZ、CA、… ZZ、AAA、AAB…}。 求给出任意一个自然数n，求这个序列中第n个字符串。函数声明：String getColumnLable(int n)*/public class test16 {   /*************************">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2018-3-27">
-<meta property="og:url" content="http://yoursite.com/2018/03/27/2018-3-27/index.html">
+<meta property="og:title" content="FindNString">
+<meta property="og:url" content="http://yoursite.com/2018/03/27/2018-3-26/index.html">
 <meta property="og:site_name" content="LiuHao&#39;blog">
-<meta property="og:description" content="package com.hello.test;/**  题目描述： 设定如下的对应关系（A=1，B=2，C=3,…,Z=26,AB=28,…,AAA=xxx,…),编写一个转换函数， 根据上面的规则把一个字符串转成数字  @author Liuhao /public class StringToNumber {  public static void main(String[] args) {">
-<meta property="og:image" content="https://github.com/foreverliuhao/IMG/raw/master/isChar.png">
-<meta property="og:updated_time" content="2018-03-26T17:15:07.057Z">
+<meta property="og:description" content="/* 1 在Excel中，列的名称是这样一个递增序列：seq={A、B、C、…  Z、AA、AB、AC、… AZ、BA、BB、BC、… BZ、CA、… ZZ、AAA、AAB…}。 求给出任意一个自然数n，求这个序列中第n个字符串。函数声明：String getColumnLable(int n)*/public class test16 {   /*************************">
+<meta property="og:updated_time" content="2018-03-26T17:21:02.600Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="2018-3-27">
-<meta name="twitter:description" content="package com.hello.test;/**  题目描述： 设定如下的对应关系（A=1，B=2，C=3,…,Z=26,AB=28,…,AAA=xxx,…),编写一个转换函数， 根据上面的规则把一个字符串转成数字  @author Liuhao /public class StringToNumber {  public static void main(String[] args) {">
-<meta name="twitter:image" content="https://github.com/foreverliuhao/IMG/raw/master/isChar.png">
+<meta name="twitter:title" content="FindNString">
+<meta name="twitter:description" content="/* 1 在Excel中，列的名称是这样一个递增序列：seq={A、B、C、…  Z、AA、AB、AC、… AZ、BA、BB、BC、… BZ、CA、… ZZ、AAA、AAB…}。 求给出任意一个自然数n，求这个序列中第n个字符串。函数声明：String getColumnLable(int n)*/public class test16 {   /*************************">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/03/27/2018-3-27/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/03/27/2018-3-26/"/>
 
 
 
@@ -127,7 +125,7 @@
   };
 </script>
 
-  <title>2018-3-27 | LiuHao'blog</title>
+  <title>FindNString | LiuHao'blog</title>
   
 
 
@@ -276,7 +274,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/27/2018-3-27/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/27/2018-3-26/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -293,7 +291,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">2018-3-27</h1>
+          <h1 class="post-title" itemprop="name headline">FindNString</h1>
         
 
         <div class="post-meta">
@@ -305,7 +303,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-27T01:12:10+08:00">2018-03-27</time>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-27T01:18:28+08:00">2018-03-27</time>
             
 
             
@@ -342,40 +340,33 @@
       
 
       
-        <p>package com.hello.test;<br>/**</p>
-<ul>
-<li>题目描述：</li>
-<li>设定如下的对应关系（A=1，B=2，C=3,…,Z=26,AB=28,…,AAA=xxx,…),编写一个转换函数，</li>
-<li>根据上面的规则把一个字符串转成数字</li>
-<li></li>
-<li>@author Liuhao<br><em>
-</em>/<br>public class StringToNumber {<br>  public static void main(String[] args) {  <pre><code>    System.out.println(wordColumns(&quot;AC&quot;));  
+        <p>/*<em>
+</em>1 在Excel中，列的名称是这样一个递增序列：<br><em>seq={A、B、C、…  Z、AA、AB、AC、… AZ、BA、BB、BC、… BZ、CA、… ZZ、AAA、AAB…}。
+</em>求给出任意一个自然数n，求这个序列中第n个字符串。函数声明：String getColumnLable(int n)<br>*/<br>public class test16 {  </p>
+<pre><code>/************************************* 
+ * @param args 
+ * 算法思想：分别求每一位的字符，从后向前求 
+ ************************************/  
+public static void main(String[] args) {  
+    // TODO Auto-generated method stub  
+    test16 t = new test16();  
+    System.out.println(t.getColumnLable(675556));  
 }  
-public static int wordColumns(String str){  
-    if(str==null || str.length()==0) return 0;  
-    int column = 0;  
-    String tmp=&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;;  
-    int length = str.length();  
-    for(int i=0; i&lt;str.length(); i++){  
-        char ch = str.charAt(i);  
-        int weight = weight(tmp,ch);  
-        if(weight==0)return 0;  
-        column += weight*(int)Math.pow(26,length-1-i);  
-    }  
-    return column;  
-}  
-private static int weight(String str,char ch){  
-    int weight = 0;  
-    for(int i=0; i&lt;str.length(); i++){  
-        if(ch==str.charAt(i)){  
-            weight = i+1;  
-            break;  
+
+String getColumnLable(int n) {  
+
+    String tmp = &quot;&quot;;  
+        // 按位找  
+        int count = 1;  
+        while (((int) (n / Math.pow(26, count-1)) &gt; 0)) {  
+            int w3 = ((int) (n % Math.pow(26, count)) / (int) Math.pow(26, count - 1));  
+            char c = (char) (w3 + 65);  
+            tmp = c + tmp;  
+            count++;  
         }  
-    }  
-    return weight;  
+    return tmp;  
 }  
-</code></pre>}<br><img src="https://github.com/foreverliuhao/IMG/raw/master/isChar.png" alt="字符串转数字"></li>
-</ul>
+</code></pre><p>}  </p>
 
       
     </div>
@@ -403,8 +394,8 @@ private static int weight(String str,char ch){
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/03/26/Window上用hexo搭建个人博客/" rel="next" title="Window上用hexo搭建个人博客">
-                <i class="fa fa-chevron-left"></i> Window上用hexo搭建个人博客
+              <a href="/2018/03/27/2018-3-27/" rel="next" title="2018-3-27">
+                <i class="fa fa-chevron-left"></i> 2018-3-27
               </a>
             
           </div>
@@ -412,10 +403,6 @@ private static int weight(String str,char ch){
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/03/27/2018-3-26/" rel="prev" title="FindNString">
-                FindNString <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>

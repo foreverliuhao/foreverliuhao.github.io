@@ -271,6 +271,156 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/27/2018-3-26/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LiuHao'blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/03/27/2018-3-26/" itemprop="url">FindNString</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-27T01:18:28+08:00">2018-03-27</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>/*<em>
+</em>1 在Excel中，列的名称是这样一个递增序列：<br><em>seq={A、B、C、…  Z、AA、AB、AC、… AZ、BA、BB、BC、… BZ、CA、… ZZ、AAA、AAB…}。
+</em>求给出任意一个自然数n，求这个序列中第n个字符串。函数声明：String getColumnLable(int n)<br>*/<br>public class test16 {  </p>
+<pre><code>/************************************* 
+ * @param args 
+ * 算法思想：分别求每一位的字符，从后向前求 
+ ************************************/  
+public static void main(String[] args) {  
+    // TODO Auto-generated method stub  
+    test16 t = new test16();  
+    System.out.println(t.getColumnLable(675556));  
+}  
+
+String getColumnLable(int n) {  
+
+    String tmp = &quot;&quot;;  
+        // 按位找  
+        int count = 1;  
+        while (((int) (n / Math.pow(26, count-1)) &gt; 0)) {  
+            int w3 = ((int) (n % Math.pow(26, count)) / (int) Math.pow(26, count - 1));  
+            char c = (char) (w3 + 65);  
+            tmp = c + tmp;  
+            count++;  
+        }  
+    return tmp;  
+}  
+</code></pre><p>}  </p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/27/2018-3-27/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1029,7 +1179,7 @@ return low;
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
