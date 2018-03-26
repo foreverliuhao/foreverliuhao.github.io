@@ -271,6 +271,163 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/27/2018-3-27/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LiuHao'blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/03/27/2018-3-27/" itemprop="url">2018-3-27</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-27T01:12:10+08:00">2018-03-27</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>package com.hello.test;<br>/**</p>
+<ul>
+<li>题目描述：</li>
+<li>设定如下的对应关系（A=1，B=2，C=3,…,Z=26,AB=28,…,AAA=xxx,…),编写一个转换函数，</li>
+<li>根据上面的规则把一个字符串转成数字</li>
+<li></li>
+<li>@author Liuhao<br><em>
+</em>/<br>public class StringToNumber {<br>  public static void main(String[] args) {  <pre><code>    System.out.println(wordColumns(&quot;AC&quot;));  
+}  
+public static int wordColumns(String str){  
+    if(str==null || str.length()==0) return 0;  
+    int column = 0;  
+    String tmp=&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;;  
+    int length = str.length();  
+    for(int i=0; i&lt;str.length(); i++){  
+        char ch = str.charAt(i);  
+        int weight = weight(tmp,ch);  
+        if(weight==0)return 0;  
+        column += weight*(int)Math.pow(26,length-1-i);  
+    }  
+    return column;  
+}  
+private static int weight(String str,char ch){  
+    int weight = 0;  
+    for(int i=0; i&lt;str.length(); i++){  
+        if(ch==str.charAt(i)){  
+            weight = i+1;  
+            break;  
+        }  
+    }  
+    return weight;  
+}  
+</code></pre>}<br><img src="https://github.com/foreverliuhao/IMG/raw/master/isChar.png" alt="字符串转数字"></li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/26/Window上用hexo搭建个人博客/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -872,7 +1029,7 @@ return low;
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
