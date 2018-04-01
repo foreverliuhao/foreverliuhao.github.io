@@ -99,25 +99,23 @@
 
 
 
-  <meta name="description" content="package com.hello.test;/**  题目描述： 设定如下的对应关系（A=1，B=2，C=3,…,Z=26,AB=28,…,AAA=xxx,…),编写一个转换函数， 根据上面的规则把一个字符串转成数字  @author Liuhao /public class StringToNumber {  public static void main(String[] args) {">
+  <meta name="description" content="基本思想：链表的长度为k，要删除倒数第k个节点，由此我们可以得到倒数第k个节点的前驱节点为N-k,那么从k开始遍历链表，K的值就会变为K-N，第二次遍历时，K的值不断加一，加到零就停止遍历。public class Node{ public int value; public Node next; public Node(int data){ this.value=data; } }public">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2018-3-27">
-<meta property="og:url" content="http://yoursite.com/2018/03/27/2018-3-27/index.html">
+<meta property="og:title" content="2018-3-31链表倒数第K个节点">
+<meta property="og:url" content="http://yoursite.com/2018/04/02/2018-3-31链表倒数第K个节点/index.html">
 <meta property="og:site_name" content="LiuHao&#39;blog">
-<meta property="og:description" content="package com.hello.test;/**  题目描述： 设定如下的对应关系（A=1，B=2，C=3,…,Z=26,AB=28,…,AAA=xxx,…),编写一个转换函数， 根据上面的规则把一个字符串转成数字  @author Liuhao /public class StringToNumber {  public static void main(String[] args) {">
-<meta property="og:image" content="https://github.com/foreverliuhao/IMG/raw/master/isChar.png">
-<meta property="og:updated_time" content="2018-03-26T17:15:07.057Z">
+<meta property="og:description" content="基本思想：链表的长度为k，要删除倒数第k个节点，由此我们可以得到倒数第k个节点的前驱节点为N-k,那么从k开始遍历链表，K的值就会变为K-N，第二次遍历时，K的值不断加一，加到零就停止遍历。public class Node{ public int value; public Node next; public Node(int data){ this.value=data; } }public">
+<meta property="og:updated_time" content="2018-04-01T16:26:45.826Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="2018-3-27">
-<meta name="twitter:description" content="package com.hello.test;/**  题目描述： 设定如下的对应关系（A=1，B=2，C=3,…,Z=26,AB=28,…,AAA=xxx,…),编写一个转换函数， 根据上面的规则把一个字符串转成数字  @author Liuhao /public class StringToNumber {  public static void main(String[] args) {">
-<meta name="twitter:image" content="https://github.com/foreverliuhao/IMG/raw/master/isChar.png">
+<meta name="twitter:title" content="2018-3-31链表倒数第K个节点">
+<meta name="twitter:description" content="基本思想：链表的长度为k，要删除倒数第k个节点，由此我们可以得到倒数第k个节点的前驱节点为N-k,那么从k开始遍历链表，K的值就会变为K-N，第二次遍历时，K的值不断加一，加到零就停止遍历。public class Node{ public int value; public Node next; public Node(int data){ this.value=data; } }public">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/03/27/2018-3-27/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/04/02/2018-3-31链表倒数第K个节点/"/>
 
 
 
@@ -127,7 +125,7 @@
   };
 </script>
 
-  <title>2018-3-27 | LiuHao'blog</title>
+  <title>2018-3-31链表倒数第K个节点 | LiuHao'blog</title>
   
 
 
@@ -276,7 +274,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/27/2018-3-27/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/02/2018-3-31链表倒数第K个节点/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -293,7 +291,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">2018-3-27</h1>
+          <h1 class="post-title" itemprop="name headline">2018-3-31链表倒数第K个节点</h1>
         
 
         <div class="post-meta">
@@ -305,7 +303,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-27T01:12:10+08:00">2018-03-27</time>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-02T00:17:47+08:00">2018-04-02</time>
             
 
             
@@ -342,40 +340,9 @@
       
 
       
-        <p>package com.hello.test;<br>/**</p>
-<ul>
-<li>题目描述：</li>
-<li>设定如下的对应关系（A=1，B=2，C=3,…,Z=26,AB=28,…,AAA=xxx,…),编写一个转换函数，</li>
-<li>根据上面的规则把一个字符串转成数字</li>
-<li></li>
-<li>@author Liuhao<br><em>
-</em>/<br>public class StringToNumber {<br>  public static void main(String[] args) {  <pre><code>    System.out.println(wordColumns(&quot;AC&quot;));  
-}  
-public static int wordColumns(String str){  
-    if(str==null || str.length()==0) return 0;  
-    int column = 0;  
-    String tmp=&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;;  
-    int length = str.length();  
-    for(int i=0; i&lt;str.length(); i++){  
-        char ch = str.charAt(i);  
-        int weight = weight(tmp,ch);  
-        if(weight==0)return 0;  
-        column += weight*(int)Math.pow(26,length-1-i);  
-    }  
-    return column;  
-}  
-private static int weight(String str,char ch){  
-    int weight = 0;  
-    for(int i=0; i&lt;str.length(); i++){  
-        if(ch==str.charAt(i)){  
-            weight = i+1;  
-            break;  
-        }  
-    }  
-    return weight;  
-}  
-</code></pre>}<br><img src="https://github.com/foreverliuhao/IMG/raw/master/isChar.png" alt="字符串转数字"></li>
-</ul>
+        <p>基本思想：链表的长度为k，要删除倒数第k个节点，由此我们可以得到<br>倒数第k个节点的前驱节点为N-k,那么从k开始遍历链表，K的值就会变为<br>K-N，第二次遍历时，K的值不断加一，加到零就停止遍历。<br>public class Node{<br> public int value;<br> public Node next;<br> public Node(int data){<br> this.value=data;<br> }</p>
+<p>}<br>public Node removeKthNode(Node head,int lastKth){<br> if(head==null||lastKth&lt;1){<br>  return head;<br> }<br> Node cur=head;<br> while(cur!=null){<br>  lastKth–;<br>  cur=cur.next;<br> }<br> if(lastKth==0){<br>  head=head.next;<br> }<br> if(lastKth&lt;0){<br>  cur=head;<br>  while(++lastKth!=0){<br>   cur=cur.next;<br>  }<br>  cur.next=cur.next.next;</p>
+<p> }<br>return head;<br>}</p>
 
       
     </div>
@@ -403,8 +370,8 @@ private static int weight(String str,char ch){
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/03/26/Window上用hexo搭建个人博客/" rel="next" title="Window上用hexo搭建个人博客">
-                <i class="fa fa-chevron-left"></i> Window上用hexo搭建个人博客
+              <a href="/2018/04/02/2018-4-1/" rel="next" title="2018-4-1数据库limit优化">
+                <i class="fa fa-chevron-left"></i> 2018-4-1数据库limit优化
               </a>
             
           </div>
@@ -412,10 +379,6 @@ private static int weight(String str,char ch){
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/03/27/2018-3-26/" rel="prev" title="FindNString">
-                FindNString <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>

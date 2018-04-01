@@ -271,6 +271,132 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/02/2018-3-31链表倒数第K个节点/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LiuHao'blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/02/2018-3-31链表倒数第K个节点/" itemprop="url">2018-3-31链表倒数第K个节点</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-02T00:17:47+08:00">2018-04-02</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>基本思想：链表的长度为k，要删除倒数第k个节点，由此我们可以得到<br>倒数第k个节点的前驱节点为N-k,那么从k开始遍历链表，K的值就会变为<br>K-N，第二次遍历时，K的值不断加一，加到零就停止遍历。<br>public class Node{<br> public int value;<br> public Node next;<br> public Node(int data){<br> this.value=data;<br> }</p>
+<p>}<br>public Node removeKthNode(Node head,int lastKth){<br> if(head==null||lastKth&lt;1){<br>  return head;<br> }<br> Node cur=head;<br> while(cur!=null){<br>  lastKth–;<br>  cur=cur.next;<br> }<br> if(lastKth==0){<br>  head=head.next;<br> }<br> if(lastKth&lt;0){<br>  cur=head;<br>  while(++lastKth!=0){<br>   cur=cur.next;<br>  }<br>  cur.next=cur.next.next;</p>
+<p> }<br>return head;<br>}</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/02/2018-4-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1468,7 +1594,7 @@ return low;
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-count">9</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
