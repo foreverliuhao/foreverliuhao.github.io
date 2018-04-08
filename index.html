@@ -271,6 +271,168 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/09/2018-4-8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LiuHao'blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/09/2018-4-8/" itemprop="url">2018-4-8</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-09T00:32:08+08:00">2018-04-09</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>package com.hello.leetcode;</p>
+<p>import java.util.ArrayList;<br>import java.util.List;<br>import java.util.Scanner;</p>
+<p>/**</p>
+<ul>
+<li>问题描述：在一条直线上，有n个房屋，</li>
+<li>每个房屋中数量不等的财宝，有一个盗贼希望从房屋中盗取财宝，由于房屋中有报警器，如果同时从相邻的两个房屋中盗取财宝就会触发报警器。问在不触发报警器的前提下，</li>
+<li>最多可获得多少财宝</li>
+<li><p>@author Liuhao<br><em>解题思路：由于同时从相邻的两个房屋中盗取财宝就会触发报警器，故
+</em>a.若选择第i个房间盗取财宝，就一定不能选择第i-1个房间的盗取财宝<br><em>b.若不选择第i个房间盗取财宝，则相当于值考虑前i-1个房间盗取财宝
+</em><br>*/<br>public class StealPrecious {</p>
+<p> public static void main(String[] args) {</p>
+<pre><code>Scanner scan=new Scanner(System.in);
+System.out.println(&quot;请输入有多少个房间&quot;);
+int n=scan.nextInt();
+System.out.println(&quot;请输入每个房间的财宝&quot;);
+int[] arr=new int[n];
+for (int i = 0; i &lt; arr.length; i++) {
+    arr[i]=scan.nextInt();
+}
+int maxPrecious=getPrecious(arr);
+System.out.println(maxPrecious);
+</code></pre><p> }<br> public static int getPrecious(int arr[]) {</p>
+<pre><code>if(arr==null) {
+    return 0;
+}
+if(arr.length==1) {
+    return arr[0];
+}
+List&lt;Integer&gt; dp=new ArrayList&lt;&gt;();
+dp.add(arr[0]);
+dp.add(Math.max(arr[0], arr[1]));
+for(int i=2;i&lt;arr.length;i++) {
+    dp.add(Math.max(dp.get(i-1), dp.get(i-2)+arr[i]));
+}
+return dp.get(arr.length-1);
+</code></pre></li>
+</ul>
+<pre><code>}
+</code></pre><p>}</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/02/2018-3-31链表倒数第K个节点/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1594,7 +1756,7 @@ return low;
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-count">10</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
